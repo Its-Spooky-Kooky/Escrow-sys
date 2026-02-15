@@ -2,13 +2,22 @@
 <html>
 <head>
   <title>Student Escrow</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h2>Escrow DApp</h2>
-  <button onclick="connectWallet()">Connect Wallet</button>
-  <button onclick="release()">Release Funds</button>
+
+  <div class="container">
+    <div class="card">
+      <h1>🔒 Student Escrow</h1>
+      <p class="subtitle">Secure. Transparent. Trustless.</p>
+
+      <button class="btn primary" onclick="connectWallet()">Connect Wallet</button>
+      <button class="btn success" onclick="release()">Release Funds</button>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/ethers@6.7.0/dist/ethers.umd.min.js"></script>
   <script src="script.js"></script>
+
 </body>
 </html>
