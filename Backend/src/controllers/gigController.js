@@ -1,4 +1,5 @@
 const Gig = require("../models/Gig");
+const User = require("../models/User");
 
 /**
  * @desc    Create a new gig draft (off-chain)
@@ -11,7 +12,7 @@ const Gig = require("../models/Gig");
  */
 const createGig = async (req, res, next) => {
   try {
-    const { title, description, amount, freelancerWallet, deadline, tags } =
+    const { title, description, amount, freelancerWallet, freelancerAddress, deadline, tags } =
       req.body;
 
     // Basic validation
@@ -22,11 +23,26 @@ const createGig = async (req, res, next) => {
       });
     }
 
+    // Support both key names for robust client compatibility
+    const fWallet = freelancerWallet || freelancerAddress;
+    let freelancerId = null;
+
+    if (fWallet) {
+      const normalizedFreelancer = fWallet.toLowerCase();
+      let freelancerUser = await User.findOne({ walletAddress: normalizedFreelancer });
+      if (!freelancerUser) {
+        freelancerUser = await User.create({ walletAddress: normalizedFreelancer });
+        console.log(`[Gig] Registered new user for freelancer: ${normalizedFreelancer}`);
+      }
+      freelancerId = freelancerUser._id;
+    }
+
     const gigData = {
       title,
       description,
       amount,
       client: req.user._id,
+      freelancer: freelancerId,
       deadline: deadline ? new Date(deadline) : null,
       tags: tags || [],
     };

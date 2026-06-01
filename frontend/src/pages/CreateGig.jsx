@@ -114,7 +114,8 @@ export default function CreateGig() {
           freelancerAddress: form.freelancerAddress,
           amount: form.amount,
         });
-        gigId = gigData._id || gigData.gigId || 'demo-new';
+        // The backend returns { success: true, data: { _id, ... } }
+        gigId = gigData.data?._id || gigData._id || gigData.gigId || 'demo-new';
       } catch (apiError) {
         console.warn('Backend unavailable, using demo gig ID:', apiError.message);
         gigId = `local-${Date.now()}`;

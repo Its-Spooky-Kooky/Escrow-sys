@@ -113,7 +113,9 @@ export default function Dashboard() {
       setIsLoading(true);
       try {
         const data = await fetchGigs();
-        setGigs(data.gigs || data || []);
+        // The backend returns { success: true, data: [...] }
+        const gigList = data.data || data.gigs || (Array.isArray(data) ? data : []);
+        setGigs(gigList);
         setIsDemo(false);
       } catch (error) {
         console.warn('Backend unreachable, loading demo data:', error.message);

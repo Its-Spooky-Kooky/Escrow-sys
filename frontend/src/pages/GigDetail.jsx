@@ -74,7 +74,8 @@ export default function GigDetail() {
       setIsLoading(true);
       try {
         const data = await fetchGigById(id);
-        setGig(data);
+        // The backend returns { success: true, data: { ... } }
+        setGig(data.data || data);
       } catch (error) {
         console.warn('Backend unreachable, using demo gig:', error.message);
         setGig(DEMO_GIG);
