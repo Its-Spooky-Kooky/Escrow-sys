@@ -24,22 +24,22 @@ export default function App() {
         toastOptions={{
           duration: 4000,
           style: {
-            background: '#111111',
-            color: '#fafafa',
-            border: '1px solid #1e1e1e',
+            background: '#ffffff',
+            color: '#1e293b',
+            border: '1px solid #e2e8f0',
             borderRadius: '12px',
             fontSize: '14px',
             padding: '12px 16px',
-            boxShadow: '0 10px 40px rgba(0, 0, 0, 0.5)',
+            boxShadow: '0 10px 40px rgba(0, 0, 0, 0.08)',
           },
           success: {
-            iconTheme: { primary: '#22c55e', secondary: '#111111' },
+            iconTheme: { primary: '#16a34a', secondary: '#ffffff' },
           },
           error: {
-            iconTheme: { primary: '#ef4444', secondary: '#111111' },
+            iconTheme: { primary: '#dc2626', secondary: '#ffffff' },
           },
           loading: {
-            iconTheme: { primary: '#8b5cf6', secondary: '#111111' },
+            iconTheme: { primary: '#059669', secondary: '#ffffff' },
           },
         }}
       />
