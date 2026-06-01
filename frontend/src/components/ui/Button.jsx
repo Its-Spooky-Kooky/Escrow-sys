@@ -72,7 +72,7 @@ const Button = forwardRef(function Button(
         'rounded-xl font-medium',
         'transition-all duration-200 ease-out',
         'cursor-pointer select-none',
-        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black',
+        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 focus-visible:ring-offset-2 focus-visible:ring-offset-white',
         variants[variant] || variants.primary,
         sizes[size] || sizes.md,
         className,

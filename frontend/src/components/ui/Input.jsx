@@ -43,7 +43,7 @@ const Input = forwardRef(function Input(
     'w-full bg-surface border rounded-xl',
     'text-foreground placeholder:text-muted',
     'transition-all duration-200',
-    'focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-offset-black',
+    'focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-offset-white',
     error
       ? 'border-danger/50 focus:ring-danger/30 focus:border-danger'
       : 'border-border hover:border-border-highlight focus:ring-accent/30 focus:border-accent/50',
