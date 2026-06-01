@@ -48,7 +48,7 @@ api.interceptors.response.use(
  * Request a nonce for wallet signature authentication.
  */
 export async function requestNonce(address) {
-  const { data } = await api.post('/auth/nonce', { address });
+  const { data } = await api.post('/auth/nonce', { walletAddress: address });
   return data;
 }
 
@@ -56,7 +56,7 @@ export async function requestNonce(address) {
  * Verify signed nonce and receive JWT.
  */
 export async function verifySignature(address, signature) {
-  const { data } = await api.post('/auth/verify', { address, signature });
+  const { data } = await api.post('/auth/verify', { walletAddress: address, signature });
   if (data.token) {
     localStorage.setItem('chainescrow_token', data.token);
   }

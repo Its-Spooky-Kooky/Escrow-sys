@@ -39,7 +39,7 @@ export default function EscrowCard({ gig, userRole, index = 0 }) {
 
       {/* ── Header: Title + Status ── */}
       <div className="flex items-start justify-between gap-3 mb-4">
-        <h3 className="text-base font-semibold text-foreground leading-snug line-clamp-2 group-hover:text-white transition-colors">
+        <h3 className="text-base font-semibold text-foreground leading-snug line-clamp-2 group-hover:text-accent transition-colors">
           {gig.title || 'Untitled Gig'}
         </h3>
         <span

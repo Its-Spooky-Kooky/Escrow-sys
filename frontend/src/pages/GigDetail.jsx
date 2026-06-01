@@ -74,7 +74,8 @@ export default function GigDetail() {
       setIsLoading(true);
       try {
         const data = await fetchGigById(id);
-        setGig(data);
+        // The backend returns { success: true, data: { ... } }
+        setGig(data.data || data);
       } catch (error) {
         console.warn('Backend unreachable, using demo gig:', error.message);
         setGig(DEMO_GIG);
@@ -453,7 +454,7 @@ export default function GigDetail() {
 
       {/* ── Submit Work Modal ── */}
       {showSubmitModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4 animate-fade-in">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/40 backdrop-blur-sm p-4 animate-fade-in">
           <div className="bg-surface border border-border rounded-2xl p-6 w-full max-w-lg animate-scale-in">
             <h3 className="text-lg font-semibold text-foreground flex items-center gap-2 mb-4">
               <Send className="h-5 w-5 text-accent" />
