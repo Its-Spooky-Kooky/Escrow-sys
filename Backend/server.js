@@ -6,10 +6,12 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const connectDB = require("./src/config/db");
+
 const { initWeb3, getEscrowFactoryContract } = require("./src/config/web3");
 const authRoutes = require("./src/routes/authRoutes");
 const gigRoutes = require("./src/routes/gigRoutes");
 const errorHandler = require("./src/middleware/errorHandler");
+
 const Gig = require("./src/models/Gig");
 
 // ============================================================================
