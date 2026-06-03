@@ -26,8 +26,8 @@ A decentralized escrow platform built to enable secure, trustless freelance paym
 - **Express.js (v5):** Fast, unopinionated web framework for building APIs.
 - **MongoDB & Mongoose:** NoSQL database and Object Data Modeling (ODM) library for flexible data storage.
 - **Ethers.js:** Backend blockchain interaction and signature verification.
-- **JSON Web Tokens (JWT):** Secure session and authentication management.
-- **dotenv & CORS:** Configuration management and Cross-Origin Resource Sharing 
+- **JSON Web Tokens (JWT):** Secure session and authentication 
+- **dotenv & CORS:** Configuration management and Cross-Origin Resource Sharing middleware.
 
 ## 🎨 UI Design
 
