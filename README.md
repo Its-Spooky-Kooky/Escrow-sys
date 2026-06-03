@@ -27,7 +27,7 @@ A decentralized escrow platform built to enable secure, trustless freelance paym
 - **MongoDB & Mongoose:** NoSQL database and Object Data Modeling (ODM) library for flexible data storage.
 - **Ethers.js:** Backend blockchain interaction and signature verification.
 - **JSON Web Tokens (JWT):** Secure session and authentication management.
-- **dotenv & CORS:** Configuration management and Cross-Origin Resource Sharing middleware.
+- **dotenv & CORS:** Configuration management and Cross-Origin Resource Sharing 
 
 ## 🎨 UI Design
 
