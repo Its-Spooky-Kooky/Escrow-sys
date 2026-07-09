@@ -89,7 +89,9 @@ Escrow-sys/
 3. Create a `.env` file in the `Frontend` directory if necessary (e.g., for `VITE_API_URL`).
 4. Start the frontend development server:
    ```bash
+   
    npm run dev
+   
    ```
 
 ## 📜 License
